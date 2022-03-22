@@ -33,13 +33,20 @@ export default {
 
 <style lang="scss" scoped>
 
+@import '../assets/scss/variables.scss';
+@import '../assets/scss/mixins.scss';
+
 header{
     width: 100%;
-    font-size: 15px;
+    font-size: 0.875rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
 }
 
 .header-container{
-    min-height: 68px;
+    min-height: 88px;
     // max-width: 1254px;
     max-width: 87%;
     margin: 0 auto;
@@ -49,7 +56,7 @@ header{
 
     .logo-wrapper{
         .logo{
-            width: 120px;
+            width: 145px;
         }
     }
 
@@ -60,11 +67,9 @@ header{
         gap: 25px;
 
         .btn-quote{
-            width: 120px;
-            height: 38px;
-            text-transform: uppercase;
-            background-color: #fed23f;
-            border: none;
+            // padding: 10px 25px;
+            @include btn-common;
+            background-color: $bright-sun;
         }
     }
 }

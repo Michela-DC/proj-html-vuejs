@@ -1,0 +1,16 @@
+@import './variables.scss';
+
+@mixin btn-common{
+    padding: 12px 30px;
+    text-transform: uppercase;
+    border: none;
+}
+
+@mixin btn-dark{
+    background-color: $tuatara;
+    color: white;
+}
+
+@mixin btn-light{
+    background-color: $bright-sun;
+}

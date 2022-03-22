@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <MainHeader/>
+    <HeaderAvada/>
+    <main>
+      <JumbotronAvada/>
+    </main>
   </div>
 </template>
 
 <script>
 
-import MainHeader from './components/MainHeader.vue'
+import HeaderAvada from './components/HeaderAvada.vue'
+import JumbotronAvada from './components/JumbotronAvada.vue'
 
 export default {
   name: 'App',
   components: {
-    MainHeader
+    HeaderAvada,
+    JumbotronAvada,
   }
 }
 </script>
