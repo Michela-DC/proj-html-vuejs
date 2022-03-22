@@ -26,15 +26,17 @@
         </div>
 
         <div class="question-container">
-            <h2>Do you have a construction project we can help with?</h2>
-            <button>get a free quote</button>
+            <div class="question-wrapper">
+                <h2>Do you have a construction project we can help with?</h2>
+                <button>get a free quote</button>
+            </div>
         </div>
     </section>
 </template>
 
 <script>
 export default {
-    name: 'JumbotronAvada'
+    name: 'SectionJumbotron'
 }
 </script>
 
@@ -46,9 +48,7 @@ export default {
 .jumbo-container{
     height: 642px;
     background-image: url('../assets/images/home-slider-62528242.jpg');
-    background-position: center;
-    background-repeat: no repeat;
-    background-size: cover;
+    @include bg-image;
     @include flex-basics;
     position: relative;
 
@@ -132,24 +132,28 @@ export default {
 
 .question-container{
     background-color: $light-color;
-    min-height: 130px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    padding-top: 45px;
 
-    button{
-        @include btn-dark;
-        @include btn-common;
-        // padding: 10px 25px;
-        text-transform: uppercase;
-        border: 2px solid white;
-        font-size: 0.875rem;
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%);
+    .question-wrapper{
+        min-height: 130px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding-top: 45px;
+        
+        button{
+            @include btn-dark;
+            @include btn-common;
+            // padding: 10px 25px;
+            text-transform: uppercase;
+            border: 2px solid white;
+            font-size: 0.875rem;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%);
+        }
     }
+
 }
     
 </style>

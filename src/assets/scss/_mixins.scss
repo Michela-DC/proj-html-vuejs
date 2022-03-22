@@ -13,6 +13,12 @@
     // border: 2px solid red;
 }
 
+@mixin bg-image {
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: cover;
+}
+
 
 @mixin btn-common{
     padding: 12px 30px;
