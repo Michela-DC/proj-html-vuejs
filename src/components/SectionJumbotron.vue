@@ -12,7 +12,9 @@
 
             <div class="demos-sale">
                 <div class="demos">
-                    <div class="icon">icona</div>
+                    <div class="icon">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
                     <div>Demos</div>
                 </div>
                 <div class="on-sale">
@@ -50,10 +52,11 @@ export default {
     background-image: url('../assets/images/home-slider-62528242.jpg');
     @include bg-image;
     @include flex-basics;
-    position: relative;
+    // position: relative;
 
     .title-wrapper{
         text-align: center;
+        @include small-wrapper;
 
         .main-title{
             font-size: 2.875rem;
@@ -87,14 +90,14 @@ export default {
     } //fine css jumbo-wrapper
 
     .demos-sale{
-        position: absolute;
-        top: 10px;
-        right: 10px;
+        position: fixed;
+        top: 100px;
+        right: 15px;
 
         .demos, .on-sale{
             background-color: white;
-            width: 48px;
-            height: 48px;
+            width: 50px;
+            height: 50px;
             border-radius: 5px;
             font-size: 0.625rem;
             text-align: center;
@@ -102,10 +105,15 @@ export default {
             flex-direction: column;
             justify-content: center;
             font-weight: bold;
+            box-shadow: 0px 0px 15px $gray-font;
         }
 
         .demos{
             margin-bottom: 5px;
+
+            .icon{
+                font-size: 1rem;
+            }
         }
 
         .on-sale{
@@ -130,10 +138,14 @@ export default {
     }
 }
 
+// Question ------------------------------------
+
 .question-container{
     background-color: $light-color;
 
     .question-wrapper{
+        @include small-wrapper;
+        margin: 0 auto;
         min-height: 130px;
         display: flex;
         justify-content: center;

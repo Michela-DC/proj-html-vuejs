@@ -5,6 +5,7 @@
       <SectionJumbotron/>
       <SectionTwo/>
       <SectionThree/>
+      <SectionFour/>
     </main>
   </div>
 </template>
@@ -15,6 +16,7 @@ import HeaderAvada from './components/HeaderAvada.vue'
 import SectionJumbotron from './components/SectionJumbotron.vue'
 import SectionTwo from './components/SectionTwo.vue'
 import SectionThree from './components/SectionThree.vue'
+import SectionFour from './components/SectionFour.vue'
 
 export default {
   name: 'App',
@@ -23,6 +25,7 @@ export default {
     SectionJumbotron,
     SectionTwo,
     SectionThree,
+    SectionFour
   }
 }
 </script>

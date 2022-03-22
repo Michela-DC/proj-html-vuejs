@@ -2,12 +2,12 @@
         <section class="section_2">
             <div class="container">
 
-                <div class="title-wrapper small-row">
+                <div class="title-wrapper">
                     <h3 class="title">specialists in modern construction</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti perferendis, aliquid asperiores voluptas sequi qui! Voluptatibus, commodi!</p>
                 </div>
 
-                <div class="cards-wrapper small-row">
+                <div class="cards-wrapper">
                     <div class="card">
                         <div class="icon">
                             <i class="fa-regular fa-building"></i>
@@ -64,33 +64,7 @@ export default {
     position: relative;
 }
 
-.title-wrapper {
-    @include small-row;
-    @include flex-basics;
-    flex-direction: column;
-    text-align: center;
-
-    .title{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        padding-bottom: 20px;
-
-        &::after{
-            content: "";
-            position: absolute;
-            width: 35%;
-            top: 100%;
-            height: 0.125rem;
-            background-color: $light-color;
-        }
-    }
-
-    p{
-        padding-top: 25px;
-        color: $gray-font;
-    }
-}
+@include reusable-section-title;
 
 .cards-wrapper{
     // width: 1120px;

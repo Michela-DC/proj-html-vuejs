@@ -6,11 +6,15 @@
     justify-content: center;
 }
 
-@mixin small-row {
-    // width: 45%;
-    max-width: 655px;
-    margin: 0 auto;
-    // border: 2px solid red;
+@mixin small-wrapper {
+    width: 45%;
+    // max-width: 655px;
+    border: 2px solid blue;
+}
+
+@mixin wrapper{
+    width: 60%;
+    border: 2px solid red;
 }
 
 @mixin bg-image {
@@ -19,6 +23,7 @@
     background-size: cover;
 }
 
+// bottoni ---------------------
 
 @mixin btn-common{
     padding: 12px 30px;
@@ -27,10 +32,42 @@
 }
 
 @mixin btn-dark{
-    background-color: $btn-dark-color;
+    background-color: $btn-dark;
     color: white;
 }
 
 @mixin btn-light{
     background-color: $light-color;
+}
+
+// -------------------------------
+
+@mixin reusable-section-title{
+    .title-wrapper {
+        @include small-wrapper;
+        @include flex-basics;
+        flex-direction: column;
+        text-align: center;
+    
+        .title{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+    
+            &::after{
+                content: "";
+                position: absolute;
+                width: 35%;
+                top: 100%;
+                height: 0.125rem;
+                background-color: $light-color;
+            }
+        }
+    
+        p{
+            padding-top: 25px;
+            color: $gray-font;
+        }
+    }
 }

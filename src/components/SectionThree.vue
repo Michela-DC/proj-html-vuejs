@@ -1,36 +1,38 @@
 <template>
     <section class="section-3">
         <div class="container">
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-suitcase"></i>
+            <div class="cards-wrapper">
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa-solid fa-suitcase"></i>
+                    </div>
+                    <div class="number">3534</div>
+                    <div class="info">planning applications</div>
                 </div>
-                <div class="number">3534</div>
-                <div class="info">planning applications</div>
-            </div>
 
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-regular fa-building"></i>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa-regular fa-building"></i>
+                    </div>
+                    <div class="number">896</div>
+                    <div class="info">completed projects</div>
                 </div>
-                <div class="number">896</div>
-                <div class="info">completed projects</div>
-            </div>
 
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-users"></i>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="number">172</div>
+                    <div class="info">trained professionals</div>
                 </div>
-                <div class="number">172</div>
-                <div class="info">trained professionals</div>
-            </div>
 
-            <div class="card">
-                <div class="icon">
-                    <i class="fa-solid fa-globe"></i>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="number">19</div>
+                    <div class="info">international offices</div>
                 </div>
-                <div class="number">19</div>
-                <div class="info">international offices</div>
             </div>
         </div>
     </section>
@@ -50,7 +52,6 @@ export default {
     background-image: url('../assets/images/home-244125289.jpg');
     @include bg-image;
     position: relative;
-    // border: 2px solid red;
     
     &::before{
         content: '';
@@ -74,24 +75,30 @@ export default {
     .container{
         height: 500px;
         @include flex-basics;
-        gap: 50px;
 
-        .card{
-            text-transform: uppercase;
-            text-align: center;
-            
-            .icon, .number{
-                color: $light-color;
-                font-size: 2.875rem;
+        .cards-wrapper{
+            @include wrapper;
+            display: flex;
+            justify-content: space-between;
+
+            .card{
+                text-transform: uppercase;
+                text-align: center;
+                
+                .icon, .number{
+                    color: $light-color;
+                    font-size: 2.875rem;
+                }
+
+                .info{
+                    padding-top: 8px;
+                    color: white;
+                    font-size: 0.875rem;
+                }
+
             }
-
-            .info{
-                padding-top: 8px;
-                color: white;
-                font-size: 0.875rem;
-            }
-
         }
+
     }
 }
 
