@@ -10,3 +10,17 @@
 ul li{
     list-style: none;
 }
+
+h2, h3{
+    text-transform: capitalize; //rende maiuscole tutte le lettere iniziali
+    font-weight: normal;
+}
+
+div[class*="block"] h3{ //tutti gli h3 che sono dentro ad un div la cui class contiene block
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 0.875rem;
+    line-height: 1.688rem;
+}

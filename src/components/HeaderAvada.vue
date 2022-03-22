@@ -69,7 +69,7 @@ header{
         .btn-quote{
             // padding: 10px 25px;
             @include btn-common;
-            background-color: $bright-sun;
+            @include btn-light;
         }
     }
 }

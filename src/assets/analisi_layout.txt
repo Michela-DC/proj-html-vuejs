@@ -16,19 +16,18 @@ COMPONENT = HEADER {
             _ button con hover
 }
 
-COMPONENT Jumbotron {
+COMPONENT Jumbotron{
     - SECTION 1 suddivisa in:
-        _ jumbotron con 1 row a 1 colonna con dentro titlo h1, frase, 2 bottoni entrambe con hover 
-        e in alto a destra rimando a demos e prezzo on sale
-        _ div giallo 1 row con 1 colonna con h2 e con bottone sporgente get a free quote che ha l'hover
+        _ jumbo container con al centro div contenente titolo, frase, 2 bottoni entrambe con hover e in alto a destra demos e prezzo on sale
+        _ div giallo con dentro centrato h2 e bottone sporgente get a free quote che ha l'hover
 }
 
 COMPONENT = BLOCK 1 {
     - SECTION 2 ('specialists') con bottom concavo è suddivisibile in 2 row:
-        1. con 1 colonna che dentro ha titolo (h3) - seperatore che potrebbe essere un after - descrizione (p)
+        1. che dentro ha titolo (h3) - seperatore che potrebbe essere un after - descrizione (p)
         2. 4 colonne = CARDS suddivise internamente con icona, titolo e info --> hanno tutte l'hover
 
-    - SECTION 3 ('numbers') con img di background suddivisibile 1 row con 4 colonne
+    - SECTION 3 ('numbers') cha img di background e suddivisibile in 4 colonne
 
     - SECTION 4 ('explore') con top concavo suddivisibile in 3 row:
         1. riprende la prima row della section 2
@@ -62,7 +61,7 @@ COMPONENT = BLOCK 3 {
 COMPONENT = FOOTER {
     - FOOTER suddiviso in:
         _ section 1 = 1 row con dentro 4 colonne e come border top ha una riga grigia
-        _ section 2 = 1 row 2 collonne:
+        _ section 2 = 1 row 2 colonne:
             1_ copyright e powered by
             2_ link ai social media
     }

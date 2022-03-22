@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="jumbotron">
         <div class="jumbo-container">
             <div class="title-wrapper">
                 <h1 class="main-title">Building inspiring spaces</h1>
@@ -25,12 +25,9 @@
             </div>
         </div>
 
-        <div class="question">
-            <div class="question-wrapper">
-                <h2>Do you have a construction project we can help with?</h2>
-
-                <button>get a free quote</button>
-            </div>
+        <div class="question-container">
+            <h2>Do you have a construction project we can help with?</h2>
+            <button>get a free quote</button>
         </div>
     </section>
 </template>
@@ -52,9 +49,7 @@ export default {
     background-position: center;
     background-repeat: no repeat;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-basics;
     position: relative;
 
     .title-wrapper{
@@ -68,9 +63,7 @@ export default {
         }
         
         .subtitle{
-            text-transform: capitalize; //rende maiuscole tutte le lettere iniziali
-            font-weight: normal;
-            color: $bright-sun;
+            color: $light-color;
             margin-bottom: 30px
         }
 
@@ -137,34 +130,25 @@ export default {
     }
 }
 
-.question{
-    background-color: $bright-sun;
+.question-container{
+    background-color: $light-color;
+    min-height: 130px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 45px;
 
-    .question-wrapper{
-        min-height: 130px;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        padding-top: 45px;
-
-        h2{
-            font-weight: normal;
-            text-transform: capitalize; 
-        }
-
-        button{
-            @include btn-dark;
-            @include btn-common;
-            // padding: 10px 25px;
-            text-transform: uppercase;
-            border: 2px solid white;
-            font-size: 0.875rem;
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%);
-        }
-        
+    button{
+        @include btn-dark;
+        @include btn-common;
+        // padding: 10px 25px;
+        text-transform: uppercase;
+        border: 2px solid white;
+        font-size: 0.875rem;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%);
     }
 }
     
