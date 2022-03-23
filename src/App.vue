@@ -1,35 +1,43 @@
 <template>
   <div id="app">
-    <HeaderAvada/>
+    <HeaderNavbar/>
     <main>
       <SectionJumbotron/>
       <SectionTwo/>
       <SectionThree/>
       <SectionFour/>
       <SectionFive/>
+      <SectionSix/>
     </main>
+    <FooterAbout/>
   </div>
 </template>
 
 <script>
 
-import HeaderAvada from './components/HeaderAvada.vue'
+import HeaderNavbar from './components/HeaderNavbar.vue'
 import SectionJumbotron from './components/SectionJumbotron.vue'
 import SectionTwo from './components/SectionTwo.vue'
 import SectionThree from './components/SectionThree.vue'
 import SectionFour from './components/SectionFour.vue'
 import SectionFive from './components/SectionFive.vue'
+import SectionSix from './components/SectionSix.vue'
+
+import FooterAbout from './components/FooterAbout.vue'
 
 
 export default {
   name: 'App',
   components: {
-    HeaderAvada,
+    HeaderNavbar,
     SectionJumbotron,
     SectionTwo,
     SectionThree,
     SectionFour,
     SectionFive,
+    SectionSix,
+
+    FooterAbout,
   }
 }
 </script>

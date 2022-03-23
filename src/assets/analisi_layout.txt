@@ -16,39 +16,38 @@ COMPONENT = HEADER {
             _ button con hover
 }
 
-COMPONENT Jumbotron{
-    - SECTION 1 suddivisa in:
-        _ jumbo container con al centro div contenente titolo, frase, 2 bottoni entrambe con hover e in alto a destra demos e prezzo on sale
-        _ div giallo con dentro centrato h2 e bottone sporgente get a free quote che ha l'hover
-}
+- SECTION 1 suddivisa in:
+    _ jumbo container con al centro div contenente titolo, frase, 2 bottoni entrambe con hover e in alto a destra demos e prezzo on sale
 
-- SECTION 2 ('specialists') con bottom concavo è suddivisibile in 2 row:
+_ SECTION 2 ('question') con dentro centrato h2 e bottone sporgente get a free quote che ha l'hover
+
+- SECTION 3 ('specialists') con bottom concavo è suddivisibile in 2 row:
     1. che dentro ha titolo (h3) - seperatore che potrebbe essere un after - descrizione (p)
     2. 4 colonne = CARDS suddivise internamente con icona, titolo e info --> hanno tutte l'hover
 
-- SECTION 3 ('numbers') cha img di background e suddivisibile in 4 colonne
+- SECTION 4 ('numbers') cha img di background e suddivisibile in 4 colonne
 
-- SECTION 4 ('explore') con top concavo suddivisibile in 3 row:
+- SECTION 5 ('explore') con top concavo suddivisibile in 3 row:
     1. riprende la prima row della section 2
     2. ci sono 3 colonne con solo img --> hanno tutte l'hover con card
     3. 'view all project' con i separatori ai lati che potrebbero essere dei before e after
 
-- SECTION 5 ('core values') la struttura la posso riprendere dalla section 2, differenze:
+- SECTION 6 ('core values') la struttura la posso riprendere dalla section 2, differenze:
     _ le colonne non hanno background color
     _ sotto il titolo dell'icona c'è un separatore (after) 
 --> le icone hanno l'hover
 
-- SECTION 6 ('home owners')  = SLIDER in cui cambia il testimonial e la descrizione
+- SECTION 7 ('home owners')  = SLIDER in cui cambia il testimonial e la descrizione
 
-- SECTION 7 ('latest news') riprende la section 4, differenza:
+- SECTION 8 ('latest news') riprende la section 4, differenza:
     _ la row centrale ha le colonne oltre che con img anche con descrizione 
 --> l'hover è solo sull'immagine
 
-- SECTION 8 ('trusted parteners') divisibile in 2 row:
+- SECTION 9 ('trusted parteners') divisibile in 2 row:
     1. posso riprendere prima row della section 2
     2. son 4 colonne con logo dei partners
 
-- SECTION 9 ('building inspiring spaces') 1 row con 2 colonne:
+- SECTION 10 ('building inspiring spaces') 1 row con 2 colonne:
     1_ ha la stessa struttura della prima row della section 2
     2_ button get a free quote che ha hover, con sotto un p
 

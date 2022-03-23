@@ -15,7 +15,7 @@
 
 <script>
 export default {
-    name: 'MainHeader',
+    name: 'HeaderNavbar',
     data () {
         return {
             options: [

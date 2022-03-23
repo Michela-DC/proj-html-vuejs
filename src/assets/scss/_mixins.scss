@@ -13,7 +13,7 @@
 }
 
 @mixin medium-row{
-    width: 60%;
+    width: 68%;
     // border: 2px solid red;
 }
 
@@ -32,7 +32,7 @@
 }
 
 @mixin btn-dark{
-    background-color: $btn-dark;
+    background-color: $dark-color;
     color: white;
 }
 

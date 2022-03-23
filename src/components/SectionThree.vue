@@ -40,6 +40,7 @@
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, sapiente!</p>
                     </div>
                 </div>
+
             </div>
         </section>
 </template>
@@ -61,7 +62,6 @@ export default {
     @include flex-basics;
     flex-direction: column;
     gap: 55px;
-    position: relative;
 }
 
 @include reusable-title-row;
@@ -74,7 +74,6 @@ export default {
 
     .card{
         width: calc(94% / 4);
-        // height: 220px;
         @include flex-basics;
         flex-direction: column;
         text-align: center;
