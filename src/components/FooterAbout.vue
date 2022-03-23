@@ -35,7 +35,7 @@ export default {
     data () {
       return {
         aboutAvada: {
-          logo: '../assets/images/construction_logo.png',
+          logo: require('../assets/images/construction_logo.png'),
           info: 'We are specialists in the construction of unique and exclusive properties. Our work inspires. We pride ourselves on delivering outstanding quality and design for leading clients across the world.',
           button: 'learn more',
         }

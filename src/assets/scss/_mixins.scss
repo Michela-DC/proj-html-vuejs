@@ -7,13 +7,13 @@
 }
 
 @mixin small-row {
-    width: 45%;
+    width: 50%;
     // max-width: 655px;
     // border: 2px solid blue;
 }
 
 @mixin medium-row{
-    width: 68%;
+    width: 63%;
     // border: 2px solid red;
 }
 
@@ -59,7 +59,7 @@
             &::after{
                 content: "";
                 position: absolute;
-                width: 35%;
+                width: 150px;
                 top: 100%;
                 height: 0.125rem;
                 background-color: $light-color;
@@ -72,3 +72,4 @@
         }
     }
 }
+

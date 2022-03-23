@@ -40,9 +40,12 @@ export default {
 @import '../assets/scss/mixins.scss';
 @import '../assets/scss/variables.scss';
 
+.jumbotron{
+    background-image: url('../assets/images/home-slider-62528242.jpg');
+}
+
 .jumbo-container{
     height: 642px;
-    background-image: url('../assets/images/home-slider-62528242.jpg');
     @include bg-image;
     @include flex-basics;
     // position: relative;

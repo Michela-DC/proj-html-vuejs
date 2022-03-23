@@ -65,7 +65,7 @@ export default {
         @include small-row;
         @include flex-basics;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
         text-align: center;
         color: white;
 
@@ -78,7 +78,7 @@ export default {
             &::after{
                 content: "";
                 position: absolute;
-                width: 35%;
+                width: 150px;
                 top: 100%;
                 height: 0.125rem;
                 background-color: $light-color;

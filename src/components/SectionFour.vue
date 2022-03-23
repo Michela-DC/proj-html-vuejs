@@ -72,11 +72,12 @@ export default {
     }
 
     .container{
-        padding: 200px;
+        padding: 200px 0;
         @include flex-basics;
 
         .cards-row{
             @include medium-row;
+            width: 70%;
             display: flex;
             justify-content: space-between;
 
@@ -86,7 +87,7 @@ export default {
                 
                 .icon, .number{
                     color: $light-color;
-                    font-size: 2.875rem;
+                    font-size: 3rem;
                 }
 
                 .info{

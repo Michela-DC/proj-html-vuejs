@@ -57,9 +57,9 @@ export default {
 @import '../assets/scss/variables.scss';
 
 .container{
+    @include flex-basics;
     // min-height: 414px;
     padding: 100px 0 50px 0;
-    @include flex-basics;
     flex-direction: column;
     gap: 55px;
 }

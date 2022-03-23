@@ -39,9 +39,9 @@ export default {
 header{
     width: 100%;
     font-size: 0.875rem;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    // position: sticky;
+    // top: 0;
+    // z-index: 10;
     background-color: white;
 }
 

@@ -7,15 +7,21 @@
             </div>
 
             <div class="cards-row">
-                <figure class="img-wrapper">
-                    <img class="project-img" src="../assets/images/project2-featured-15013609-400x400.jpg" alt="">
-                </figure>
-                <figure class="img-wrapper">
-                    <img class="project-img" src="../assets/images/project1-featured-294276386-400x400.jpg" alt="">
-                </figure>
-                <figure class="img-wrapper">
-                    <img class="project-img" src="../assets/images/project3-featured-189023420-400x400.jpg" alt="">
-                </figure>
+                <div class="card">
+                    <figure class="img-wrapper">
+                        <img class="project-img" src="../assets/images/project2-featured-15013609-400x400.jpg" alt="">
+                    </figure>
+                </div>
+                <div class="card">
+                    <figure class="img-wrapper">
+                        <img class="project-img" src="../assets/images/project1-featured-294276386-400x400.jpg" alt="">
+                    </figure>
+                </div>
+                <div class="card">
+                    <figure class="img-wrapper">
+                        <img class="project-img" src="../assets/images/project3-featured-189023420-400x400.jpg" alt="">
+                    </figure>
+                </div>
             </div>
 
             <div class="view-all-row">
@@ -51,17 +57,17 @@ export default {
 .cards-row{
     @include medium-row;
     display: flex;
-    justify-content: space-between;
-    gap: 2%;
+    gap: 2.8%;
 
-    .img-wrapper{
-        width: calc(96% / 3);
-        
-        .project-img{
-            display: block;
-            width: 100%;
+    .card{
+        .img-wrapper{
+            .project-img{
+                display: block;
+                width: 100%;
+            }
         }
     }
+
 }
 
 .view-all-row{
@@ -72,7 +78,7 @@ export default {
     &::before{
         content: "";
         height: 2px;
-        width: calc(96% / 3);
+        width: calc(94.4% / 3);
         position: absolute;
         right: 0;
         top: 50%;
@@ -84,7 +90,7 @@ export default {
     &::after{
         content: "";
         height: 2px;
-        width: calc(96% / 3);
+        width: calc(94.4% / 3);
         position: absolute;
         left: 0;
         top: 50%;
@@ -95,8 +101,8 @@ export default {
 
     .view-all{
         text-transform: uppercase;
-        font-size: 0.875rem;
-
+        font-size: 0.78rem;
+        color: $gray-font;
     }
 }
 
