@@ -59,7 +59,6 @@ export default {
         top: 0;
         width: 100%;
         height: 68px;
-        background-color: white;
         background: radial-gradient(60% 68px at top, white 99%, transparent);
     }
 
@@ -73,7 +72,7 @@ export default {
     }
 
     .container{
-        height: 500px;
+        padding: 200px;
         @include flex-basics;
 
         .cards-row{
