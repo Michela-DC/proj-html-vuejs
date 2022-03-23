@@ -6,6 +6,7 @@
       <SectionTwo/>
       <SectionThree/>
       <SectionFour/>
+      <SectionFive/>
     </main>
   </div>
 </template>
@@ -17,6 +18,8 @@ import SectionJumbotron from './components/SectionJumbotron.vue'
 import SectionTwo from './components/SectionTwo.vue'
 import SectionThree from './components/SectionThree.vue'
 import SectionFour from './components/SectionFour.vue'
+import SectionFive from './components/SectionFive.vue'
+
 
 export default {
   name: 'App',
@@ -25,7 +28,8 @@ export default {
     SectionJumbotron,
     SectionTwo,
     SectionThree,
-    SectionFour
+    SectionFour,
+    SectionFive,
   }
 }
 </script>

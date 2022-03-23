@@ -26,13 +26,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="question-container">
-            <div class="question-row">
-                <h2>Do you have a construction project we can help with?</h2>
-                <button>get a free quote</button>
-            </div>
-        </div>
     </section>
 </template>
 
@@ -70,7 +63,7 @@ export default {
             margin-bottom: 30px
         }
 
-        .btn-wrapper{
+        .btn-container{
             button[class^="btn"]{
                 @include btn-common;
                 font-size: 0.9rem;
@@ -137,36 +130,6 @@ export default {
             }
         }
     }
-}
-
-// Question ------------------------------------
-
-.question-container{
-    background-color: $light-color;
-
-    .question-row{
-        @include small-row;
-        margin: 0 auto;
-        min-height: 130px;
-        display: flex;
-        justify-content: center;
-        position: relative;
-        padding-top: 45px;
-        
-        button{
-            @include btn-dark;
-            @include btn-common;
-            // padding: 10px 25px;
-            text-transform: uppercase;
-            border: 2px solid white;
-            font-size: 0.875rem;
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%);
-        }
-    }
-
 }
     
 </style>

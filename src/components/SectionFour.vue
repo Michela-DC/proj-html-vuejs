@@ -1,101 +1,103 @@
 <template>
-  <section class="section-four">
-      <div class="container">
-            <div class="title-row">
-                <h3 class="title">explore recent work</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti perferendis, aliquid asperiores voluptas sequi qui! Voluptatibus, commodi!</p>
-            </div>
-
+    <section class="section-4">
+        <div class="container">
             <div class="cards-row">
-                <figure class="img-wrapper">
-                    <img class="project-img" src="../assets/images/project2-featured-15013609-400x400.jpg" alt="">
-                </figure>
-                <figure class="img-wrapper">
-                    <img class="project-img" src="../assets/images/project1-featured-294276386-400x400.jpg" alt="">
-                </figure>
-                <figure class="img-wrapper">
-                    <img class="project-img" src="../assets/images/project3-featured-189023420-400x400.jpg" alt="">
-                </figure>
-            </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa-solid fa-suitcase"></i>
+                    </div>
+                    <div class="number">3534</div>
+                    <div class="info">planning applications</div>
+                </div>
 
-            <div class="view-all-row">
-                <div class="view-all">
-                    view all projects
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa-regular fa-building"></i>
+                    </div>
+                    <div class="number">896</div>
+                    <div class="info">completed projects</div>
+                </div>
+
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="number">172</div>
+                    <div class="info">trained professionals</div>
+                </div>
+
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="number">19</div>
+                    <div class="info">international offices</div>
                 </div>
             </div>
-      </div>
-  </section>
+        </div>
+    </section>
 </template>
 
 <script>
 export default {
-    name: 'SectionFour'
+    name: 'SectionFour',
 }
 </script>
 
 <style lang="scss" scoped>
 
 @import '../assets/scss/mixins.scss';
-@import '../assets/scss/variables.scss';
 
-.container{
-    // height: 550px;
-    padding: 50px 0 70px 0;
-    @include flex-basics;
-    flex-direction: column;
-    gap: 55px;
-}
-
-@include reusable-title-row;
-
-.cards-row{
-    @include medium-row;
-    display: flex;
-    justify-content: space-between;
-    gap: 2%;
-
-    .img-wrapper{
-        width: calc(96% / 3);
-        
-        .project-img{
-            display: block;
-            width: 100%;
-        }
-    }
-}
-
-.view-all-row{
-    @include medium-row;
-    @include flex-basics;
+.section-4{
+    background-image: url('../assets/images/home-244125289.jpg');
+    @include bg-image;
     position: relative;
-
+    
     &::before{
-        content: "";
-        height: 2px;
-        width: calc(96% / 3);
+        content: '';
         position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translate(0, -50%);
-        border-radius: 50px; 
-        background-color: $light-gray;
+        top: 0;
+        width: 100%;
+        height: 68px;
+        background-color: white;
+        background: radial-gradient(60% 68px at top, white 99%, transparent);
     }
 
     &::after{
-        content: "";
-        height: 2px;
-        width: calc(96% / 3);
+        content: '';
         position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translate(0, -50%);
-        border-radius: 50px;
-        background-color: $light-gray;
+        bottom: 0;
+        width: 100%;
+        height: 68px;
+        background: radial-gradient(60% 68px at bottom, white 99%, transparent);
     }
 
-    .view-all{
-        text-transform: uppercase;
-        font-size: 0.875rem;
+    .container{
+        height: 500px;
+        @include flex-basics;
+
+        .cards-row{
+            @include medium-row;
+            display: flex;
+            justify-content: space-between;
+
+            .card{
+                text-transform: uppercase;
+                text-align: center;
+                
+                .icon, .number{
+                    color: $light-color;
+                    font-size: 2.875rem;
+                }
+
+                .info{
+                    padding-top: 8px;
+                    color: white;
+                    font-size: 0.875rem;
+                }
+
+            }
+        }
 
     }
 }
