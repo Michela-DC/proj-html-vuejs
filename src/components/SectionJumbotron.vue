@@ -63,7 +63,7 @@ export default {
         
         .subtitle{
             color: $light-color;
-            margin-bottom: 30px
+            margin-bottom: 30px;
         }
 
         .btn-container{

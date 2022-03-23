@@ -33,11 +33,12 @@
 
 @mixin btn-dark{
     background-color: $dark-color;
-    color: white;
+    color: $light-gray;
 }
 
 @mixin btn-light{
     background-color: $light-color;
+    color: $gray-font;
 }
 
 // -------------------------------
@@ -56,6 +57,7 @@
             justify-content: center;
             padding-bottom: 18px;
             color: $dark-color;
+            font-size: 1.5rem;
     
             &::after{
                 content: "";
@@ -68,7 +70,7 @@
         }
     
         p{
-            padding-top: 25px;
+            padding-top: 20px;
             color: $gray-font;
         }
     }

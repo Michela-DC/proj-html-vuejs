@@ -17,7 +17,7 @@
                     <img class="partners-logo" src="../assets/images/home-logo2-219096700-320x202.png" alt="">
                 </figure>
                 <figure class="logo-wrapper">
-                    <img class="partners-logo" src="../assets/images/home-logo11-219096700-320x202.png" alt="">
+                    <img class="partners-logo" src="../assets/images/home-logo1-219096700-320x202.png" alt="">
                 </figure>
                 <figure class="logo-wrapper">
                     <img class="partners-logo" src="../assets/images/home-logo9-219096700-320x202.png" alt="">
@@ -26,7 +26,7 @@
       </div>
   </section>
 </template>
-
+å
 <script>
 export default {
     name: 'SectionNine'
@@ -42,7 +42,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 35px;
+    gap: 33px;
     padding: 80px 0;
 }
 
@@ -51,9 +51,11 @@ export default {
 .partners-row{
     @include medium-row;
     display: flex;
-    gap: 35px;
+    gap: 25px;
 
     .logo-wrapper{
+        padding: 0 10px;
+
         .partners-logo{
             width: 100%;
             display: block;

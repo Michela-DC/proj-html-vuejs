@@ -74,6 +74,7 @@ export default {
             display: flex;
             justify-content: center;
             padding-bottom: 15px;
+            font-size: 1.5rem;
 
             &::after{
                 content: "";
