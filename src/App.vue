@@ -10,6 +10,7 @@
       <SectionSix/>
       <SectionSeven/>
       <SectionEight/>
+      <SectionNine/>
     </main>
     <FooterAbout/>
   </div>
@@ -26,6 +27,7 @@ import SectionFive from './components/SectionFive.vue'
 import SectionSix from './components/SectionSix.vue'
 import SectionSeven from './components/SectionSeven.vue'
 import SectionEight from './components/SectionEight.vue'
+import SectionNine from './components/SectionNine.vue'
 
 import FooterAbout from './components/FooterAbout.vue'
 
@@ -42,6 +44,7 @@ export default {
     SectionSix,
     SectionSeven,
     SectionEight,
+    SectionNine,
 
     FooterAbout,
   }
