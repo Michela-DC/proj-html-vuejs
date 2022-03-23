@@ -9,12 +9,12 @@
 @mixin small-wrapper {
     width: 45%;
     // max-width: 655px;
-    border: 2px solid blue;
+    // border: 2px solid blue;
 }
 
 @mixin wrapper{
     width: 60%;
-    border: 2px solid red;
+    // border: 2px solid red;
 }
 
 @mixin bg-image {

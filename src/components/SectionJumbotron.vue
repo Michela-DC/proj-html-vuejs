@@ -91,6 +91,7 @@ export default {
 
     .demos-sale{
         position: fixed;
+        z-index: 20;
         top: 100px;
         right: 15px;
 
