@@ -1,7 +1,7 @@
 <template>
     <section class="section-3">
         <div class="container">
-            <div class="cards-wrapper">
+            <div class="cards-row">
                 <div class="card">
                     <div class="icon">
                         <i class="fa-solid fa-suitcase"></i>
@@ -76,8 +76,8 @@ export default {
         height: 500px;
         @include flex-basics;
 
-        .cards-wrapper{
-            @include wrapper;
+        .cards-row{
+            @include medium-row;
             display: flex;
             justify-content: space-between;
 

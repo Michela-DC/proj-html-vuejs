@@ -2,12 +2,12 @@
         <section class="section_2">
             <div class="container">
 
-                <div class="title-wrapper">
+                <div class="title-row">
                     <h3 class="title">specialists in modern construction</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti perferendis, aliquid asperiores voluptas sequi qui! Voluptatibus, commodi!</p>
                 </div>
 
-                <div class="cards-wrapper">
+                <div class="cards-row">
                     <div class="card">
                         <div class="icon">
                             <i class="fa-regular fa-building"></i>
@@ -64,9 +64,9 @@ export default {
     position: relative;
 }
 
-@include reusable-section-title;
+@include reusable-title-row;
 
-.cards-wrapper{
+.cards-row{
     // width: 1120px;
     width: 82%;
     display: flex;

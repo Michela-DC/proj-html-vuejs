@@ -1,12 +1,12 @@
 <template>
   <section class="section-four">
       <div class="container">
-            <div class="title-wrapper">
+            <div class="title-row">
                 <h3 class="title">explore recent work</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus corrupti perferendis, aliquid asperiores voluptas sequi qui! Voluptatibus, commodi!</p>
             </div>
 
-            <div class="cards-container">
+            <div class="cards-row">
                 <figure class="img-wrapper">
                     <img class="project-img" src="../assets/images/project2-featured-15013609-400x400.jpg" alt="">
                 </figure>
@@ -18,7 +18,7 @@
                 </figure>
             </div>
 
-            <div class="view-all-wrapper">
+            <div class="view-all-row">
                 <div class="view-all">
                     view all projects
                 </div>
@@ -46,10 +46,10 @@ export default {
     gap: 55px;
 }
 
-@include reusable-section-title;
+@include reusable-title-row;
 
-.cards-container{
-    @include wrapper;
+.cards-row{
+    @include medium-row;
     display: flex;
     justify-content: space-between;
     gap: 2%;
@@ -64,8 +64,8 @@ export default {
     }
 }
 
-.view-all-wrapper{
-    @include wrapper;
+.view-all-row{
+    @include medium-row;
     @include flex-basics;
     position: relative;
 

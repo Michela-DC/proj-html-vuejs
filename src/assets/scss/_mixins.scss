@@ -6,13 +6,13 @@
     justify-content: center;
 }
 
-@mixin small-wrapper {
+@mixin small-row {
     width: 45%;
     // max-width: 655px;
     // border: 2px solid blue;
 }
 
-@mixin wrapper{
+@mixin medium-row{
     width: 60%;
     // border: 2px solid red;
 }
@@ -42,9 +42,10 @@
 
 // -------------------------------
 
-@mixin reusable-section-title{
-    .title-wrapper {
-        @include small-wrapper;
+@mixin reusable-title-row {
+
+    .title-row {
+        @include small-row;
         @include flex-basics;
         flex-direction: column;
         text-align: center;

@@ -1,10 +1,10 @@
 <template>
     <section class="jumbotron">
         <div class="jumbo-container">
-            <div class="title-wrapper">
+            <div class="title-row">
                 <h1 class="main-title">Building inspiring spaces</h1>
                 <h3 class="subtitle">we build inspiring residential & commercial spaces</h3>
-                <div class="btn-wrapper">
+                <div class="btn-container">
                     <button class="btn-explore">explore recent work</button>
                     <button class="btn-quote">get a quote today</button>
                 </div>
@@ -28,7 +28,7 @@
         </div>
 
         <div class="question-container">
-            <div class="question-wrapper">
+            <div class="question-row">
                 <h2>Do you have a construction project we can help with?</h2>
                 <button>get a free quote</button>
             </div>
@@ -54,9 +54,9 @@ export default {
     @include flex-basics;
     // position: relative;
 
-    .title-wrapper{
+    .title-row{
         text-align: center;
-        @include small-wrapper;
+        @include small-row;
 
         .main-title{
             font-size: 2.875rem;
@@ -144,8 +144,8 @@ export default {
 .question-container{
     background-color: $light-color;
 
-    .question-wrapper{
-        @include small-wrapper;
+    .question-row{
+        @include small-row;
         margin: 0 auto;
         min-height: 130px;
         display: flex;
