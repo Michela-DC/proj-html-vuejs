@@ -1,5 +1,5 @@
 <template>
-    <section class="section-4">
+    <section class="section-numbers">
         <div class="container">
             <div class="cards-row">
                 <div class="card">
@@ -40,13 +40,15 @@
 
 <script>
 export default {
-    name: 'SectionFour',
+    name: 'SectionNumbers',
 }
 </script>
 
 <style lang="scss" scoped>
+
 @import '../assets/scss/mixins.scss';
-.section-4{
+
+.section-numbers{
     background-image: url('../assets/images/home-244125289.jpg');
     @include bg-image;
     position: relative;
@@ -74,16 +76,18 @@ export default {
     }
 
     .container{
-        padding: 175px 0;
+        padding: 175px 20px;
         @include flex-basics;
 
         .cards-row{
             @include medium-row;
             display: flex;
             justify-content: space-between;
+
             .card{
                 text-transform: uppercase;
                 text-align: center;
+                padding: 10px;
                 
                 .icon, .number{
                     color: $light-color;
@@ -98,4 +102,21 @@ export default {
         }
     }
 }
+
+@include cards-mediaquery;
+
+@media screen and (max-width: 575px){
+    .section-numbers{
+    
+        &::before{
+            bottom: 80%;
+        }
+
+        &::after{
+            top: 80%;
+        }
+    }
+
+}
+
 </style>

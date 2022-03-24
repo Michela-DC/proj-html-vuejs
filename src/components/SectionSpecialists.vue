@@ -1,5 +1,5 @@
 <template>
-        <section class="section-3">
+        <section class="section-specialists">
             <div class="container">
 
                 <div class="title-row">
@@ -47,7 +47,7 @@
 
 <script>
 export default {
-    name: 'SectionThree'
+    name: 'SectionSpecialists'
 }
 </script>
 
@@ -58,7 +58,7 @@ export default {
 
 .container{
     @include flex-basics;
-    padding: 100px 0 80px 0;
+    padding: 100px 20px 80px 20px;
     flex-direction: column;
     gap: 55px;
     //per coprire clip-path della section four:
@@ -69,9 +69,10 @@ export default {
 @include reusable-title-row;
 
 .cards-row{
-    // width: 1120px;
+    border: 1px solid red;
     width: 82%;
     display: flex;
+    @include flex-basics;
     gap: 2%;
 
     .card{
@@ -96,5 +97,34 @@ export default {
     }
 }
 
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .cards-row{
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .cards-row{
+        width: 100%;
+        flex-wrap: wrap;
+
+        .card{
+            width: calc(94% / 2);
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 575px){
+    .cards-row{
+        width: 100%;
+        flex-wrap: wrap;
+
+        .card{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}
 
 </style>

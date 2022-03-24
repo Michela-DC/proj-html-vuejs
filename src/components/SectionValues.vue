@@ -1,5 +1,5 @@
 <template>
-    <section class="secion-6">
+    <section class="secion-values">
         <div class="container">
 
             <div class="title-row">
@@ -47,7 +47,7 @@
 
 <script>
 export default {
-    name: 'SectionSix',
+    name: 'SectionValue',
 }
 </script>
 
@@ -58,10 +58,10 @@ export default {
 
 .container{
     background-color: $light-gray;
-    padding: 70px 0 50px 0;
+    padding: 70px 20px 50px 20px;
     @include flex-basics;
     flex-direction: column;
-    gap: 55px;
+    gap: 45px;
     //per coprire clip-path della section four:
     position: relative;
     z-index: 3;
@@ -128,5 +128,7 @@ export default {
         }
     }
 }
+
+@include cards-mediaquery;
 
 </style>

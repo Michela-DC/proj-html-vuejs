@@ -1,5 +1,5 @@
 <template>
-  <section class="section-5">
+  <section class="section-explore">
       <div class="container">
             <div class="title-row">
                 <h3 class="title">explore recent work</h3>
@@ -35,7 +35,7 @@
 
 <script>
 export default {
-    name: 'SectionFive'
+    name: 'SectionExplore'
 }
 </script>
 
@@ -46,10 +46,10 @@ export default {
 
 .container{
     // height: 550px;
-    padding: 50px 0 85px 0;
+    padding: 50px 20px 85px 20px;
     @include flex-basics;
     flex-direction: column;
-    gap: 55px;
+    gap: 40px;
     //per coprire clip-path della section four:
     position: relative;
     z-index: 3;
@@ -59,6 +59,7 @@ export default {
 
 .cards-row{
     @include medium-row;
+    @include flex-basics;
     display: flex;
     gap: 2.8%;
 
@@ -108,5 +109,7 @@ export default {
         color: $gray-font;
     }
 }
+
+@include cards-img-mediaquery;
 
 </style>

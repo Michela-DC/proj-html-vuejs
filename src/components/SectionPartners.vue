@@ -1,5 +1,5 @@
 <template>
-  <section class="section-9">
+  <section class="section-partners">
       <div class="container">
             <div class="title-row">
                 <h3 class="title">trusted partners</h3>
@@ -29,7 +29,7 @@
 å
 <script>
 export default {
-    name: 'SectionNine'
+    name: 'SectionPartners'
 }
 </script>
 
@@ -40,10 +40,10 @@ export default {
 
 .container{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 33px;
-    padding: 80px 0;
+    flex-direction: column;
+    gap: 40px;
+    padding: 80px 20px;
 }
 
 @include reusable-title-row;
@@ -59,6 +59,29 @@ export default {
         .partners-logo{
             width: 100%;
             display: block;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px){
+    .partners-row{
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .logo-wrapper{
+            width: 30%;
+        }
+    }
+}
+
+@media screen and (max-width: 575px){
+    .partners-row{
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .logo-wrapper{
+            border: 1px solid green;
+            width: 40%;
         }
     }
 }

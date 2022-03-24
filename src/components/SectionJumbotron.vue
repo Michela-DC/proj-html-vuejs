@@ -42,17 +42,16 @@ export default {
 
 .jumbotron{
     background-image: url('../assets/images/home-slider-62528242.jpg');
+    @include bg-image;
 }
 
 .jumbo-container{
     height: 642px;
-    @include bg-image;
+    padding: 20px;
     @include flex-basics;
-    // position: relative;
 
     .title-row{
         text-align: center;
-        @include small-row;
 
         .main-title{
             font-size: 2.875rem;
@@ -83,13 +82,13 @@ export default {
                 @include btn-light;
             }
         }
-    } //fine css jumbo-wrapper
+    } //fine row
 
     .demos-sale{
         position: fixed;
         z-index: 20;
-        top: 100px;
-        right: 15px;
+        top: 110px;
+        right: 16px;
 
         .demos, .on-sale{
             background-color: white;
@@ -132,6 +131,18 @@ export default {
                 }
             }
         }
+    }
+}
+
+@media screen and (min-width: 549px) and (max-width: 729px){
+    .jumbo-container .demos-sale{
+        top: 150px;
+    }
+}
+
+@media screen and (max-width: 548px){
+    .jumbo-container .demos-sale{
+        top: 190px;
     }
 }
     

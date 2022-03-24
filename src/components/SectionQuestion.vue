@@ -1,5 +1,5 @@
 <template>
-    <section class="section-2">
+    <section class="section-question">
         <div class="question-container">
             <div class="question-row">
                 <h2>Do you have a construction project we can help with?</h2>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-    name: 'SectionTwo'
+    name: 'SectionQuestion'
 }
 </script>
 
@@ -20,30 +20,34 @@ export default {
 @import '../assets/scss/mixins.scss';
 @import '../assets/scss/variables.scss';
 
-.question-container{
+.section-question{
     background-color: $light-color;
+}
+
+.question-container{
+    padding: 20px;
 
     .question-row{
-        @include small-row;
-        margin: 0 auto;
-        min-height: 130px;
+        // min-height: 130px;
         display: flex;
         justify-content: center;
         position: relative;
-        padding-top: 45px;
-        
+        padding: 20px 0 30px 0;
+        margin: 0 auto;
+
         button{
             @include btn-dark;
             @include btn-common;
             // padding: 10px 25px;
             text-transform: uppercase;
             border: 2px solid white;
-            font-size: 0.875rem;
+            font-size: 0.80rem;
             position: absolute;
-            top: 80%;
+            top: 96%;
             left: 50%;
             transform: translate(-50%);
         }
+        
     }
 
 }

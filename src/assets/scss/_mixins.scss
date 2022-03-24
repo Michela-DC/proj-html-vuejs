@@ -7,14 +7,20 @@
 }
 
 @mixin small-row {
-    width: 50%;
-    // max-width: 655px;
-    // border: 2px solid blue;
+    width: 47%;
+    max-width: 655px;
+
+    @media screen and (max-width: 992px){
+        width: 100%;
+    }
 }
 
 @mixin medium-row{
     width: 60%;
-    // border: 2px solid red;
+
+    @media screen and (max-width: 992px){
+        width: 100%;
+    }
 }
 
 @mixin bg-image {
@@ -46,11 +52,11 @@
 @mixin reusable-title-row {
 
     .title-row {
-        @include small-row;
         @include flex-basics;
+        @include small-row;
         flex-direction: column;
         text-align: center;
-    
+
         .title{
             position: relative;
             display: flex;
@@ -58,7 +64,7 @@
             padding-bottom: 18px;
             color: $dark-color;
             font-size: 1.5rem;
-    
+
             &::after{
                 content: "";
                 position: absolute;
@@ -68,10 +74,52 @@
                 background-color: $light-color;
             }
         }
-    
+
         p{
             padding-top: 20px;
             color: $gray-font;
+        }
+
+    }
+}
+
+// MEDIA QUEERIES -----------------------
+
+@mixin cards-mediaquery{
+    @media screen and (min-width: 576px) and (max-width: 768px){
+        .cards-row{
+            flex-wrap: wrap;
+    
+            .card{
+                width: calc(94% / 2);
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 575px){
+        .cards-row{
+            flex-wrap: wrap;
+    
+            .card{
+                border: 1px solid green;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@mixin cards-img-mediaquery{
+    @media screen and (max-width: 575px){
+        .cards-row{
+            flex-wrap: wrap;
+    
+            .card{
+                border: 1px solid green;
+                width: 60%;
+                margin-bottom: 20px;
+            }
         }
     }
 }

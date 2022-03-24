@@ -1,5 +1,5 @@
 <template>
-    <section class="section-10">
+    <section class="section-inspiring">
         <div class="container">
             <div class="row">
                 <div class="title-col">
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-
+    name: 'SectionInspiring'
 }
 </script>
 
@@ -26,14 +26,14 @@ export default {
 @import '../assets/scss/mixins.scss';
 @import '../assets/scss/variables.scss';
 
-.section-10{
+.section-inspiring{
     background-image: url('../assets/images/about-call-to-action-57862405.jpg');
     background-position-y: 82%;
     background-size: cover;
 }
 
 .container{
-    padding: 95px 0;
+    padding: 95px 20px;
     @include flex-basics;
     position: relative;
 
@@ -97,7 +97,26 @@ export default {
             color: white;
         }
     }
-
-
 }
+
+@media screen and (max-width: 768px){
+    .row{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
+        .title-col{
+            text-align: center;
+
+            .title{
+                &::after{
+                    left: 50%;
+                    transform: translate(-50%);
+                }
+            }
+
+        }
+    }
+}
+
 </style>

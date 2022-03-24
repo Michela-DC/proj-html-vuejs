@@ -1,5 +1,5 @@
 <template>
-  <section class="section-8">
+  <section class="section-news">
       <div class="container">
             <div class="title-row">
                 <h3 class="title">Latest news</h3>
@@ -64,7 +64,7 @@
 
 <script>
 export default {
-    name: 'SectionFive'
+    name: 'SectionNews'
 }
 </script>
 
@@ -73,12 +73,12 @@ export default {
 @import '../assets/scss/mixins.scss';
 @import '../assets/scss/variables.scss';
 
-.section-8{
+.section-news{
     background-color: $light-gray;
 
     .container{
         // height: 550px;
-        padding: 40px 0 85px 0;
+        padding: 40px 20px 85px 20px;
         @include flex-basics;
         flex-direction: column;
         gap: 40px;
@@ -93,6 +93,7 @@ export default {
 .cards-row{
     @include medium-row;
     display: flex;
+    justify-content: center;
     gap: 2.8%;
 
     .card{
@@ -172,5 +173,7 @@ export default {
         color: $gray-font;
     }
 }
+
+@include cards-img-mediaquery;
 
 </style>

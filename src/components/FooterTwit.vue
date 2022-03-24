@@ -52,7 +52,7 @@ export default {
     padding-top: 10px;
 
     .twit-content{
-        max-width: 260px;
+        width: 80%;
         font-size: 0.78rem;
         position: relative;
 
@@ -97,7 +97,7 @@ export default {
         }
 
         .twit-img-wrapper{
-            width: 260px;
+            width: 100%;
             margin-bottom: 5px;
 
             img{

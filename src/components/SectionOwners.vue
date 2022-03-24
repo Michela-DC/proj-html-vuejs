@@ -1,5 +1,5 @@
 <template>
-  <section class="section-7">
+  <section class="section-owners">
       <div class="container">
             <div class="row">
                 <h3 class="title">Our home owners say</h3>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-    name: 'SectionSeven'
+    name: 'SectionOwners'
 }
 </script>
 
@@ -32,7 +32,7 @@ export default {
 @import '../assets/scss/mixins.scss';
 @import '../assets/scss/variables.scss';
 
-.section-7{
+.section-owners{
     background-image: url('../assets/images/home-parallax-144609983.jpg');
     @include bg-image;
     position: relative;
@@ -63,7 +63,7 @@ export default {
 .container{
     display: flex;
     justify-content: center;
-    padding: 150px;
+    padding: 150px 20px;
 
     .row{
         @include small-row;

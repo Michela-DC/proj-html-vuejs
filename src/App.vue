@@ -3,15 +3,15 @@
     <HeaderNavbar/>
     <main>
       <SectionJumbotron/>
-      <SectionTwo/>
-      <SectionThree/>
-      <SectionFour/>
-      <SectionFive/>
-      <SectionSix/>
-      <SectionSeven/>
-      <SectionEight/>
-      <SectionNine/>
-      <SectionTen/>
+      <SectionQuestion/>
+      <SectionSpecialists/>
+      <SectionNumbers/>
+      <SectionExplore/>
+      <SectionValues/>
+      <SectionOwners/>
+      <SectionNews/>
+      <SectionPartners/>
+      <SectionInspiring/>
     </main>
     <FooterAbout/>
   </div>
@@ -21,15 +21,15 @@
 
 import HeaderNavbar from './components/HeaderNavbar.vue'
 import SectionJumbotron from './components/SectionJumbotron.vue'
-import SectionTwo from './components/SectionTwo.vue'
-import SectionThree from './components/SectionThree.vue'
-import SectionFour from './components/SectionFour.vue'
-import SectionFive from './components/SectionFive.vue'
-import SectionSix from './components/SectionSix.vue'
-import SectionSeven from './components/SectionSeven.vue'
-import SectionEight from './components/SectionEight.vue'
-import SectionNine from './components/SectionNine.vue'
-import SectionTen from './components/SectionTen.vue'
+import SectionQuestion from './components/SectionQuestion.vue'
+import SectionSpecialists from './components/SectionSpecialists.vue'
+import SectionNumbers from './components/SectionNumbers.vue'
+import SectionExplore from './components/SectionExplore.vue'
+import SectionValues from './components/SectionValues.vue'
+import SectionOwners from './components/SectionOwners.vue'
+import SectionNews from './components/SectionNews.vue'
+import SectionPartners from './components/SectionPartners.vue'
+import SectionInspiring from './components/SectionInspiring.vue'
 import FooterAbout from './components/FooterAbout.vue'
 
 export default {
@@ -37,15 +37,15 @@ export default {
   components: {
     HeaderNavbar,
     SectionJumbotron,
-    SectionTwo,
-    SectionThree,
-    SectionFour,
-    SectionFive,
-    SectionSix,
-    SectionSeven,
-    SectionEight,
-    SectionNine,
-    SectionTen,
+    SectionQuestion,
+    SectionSpecialists,
+    SectionNumbers,
+    SectionExplore,
+    SectionValues,
+    SectionOwners,
+    SectionNews,
+    SectionPartners,
+    SectionInspiring,
     FooterAbout
   }
 }

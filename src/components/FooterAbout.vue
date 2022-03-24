@@ -177,7 +177,7 @@ export default {
 
       .location-wrapper{
           .location{
-              width: 250px;
+              width: 95%;
           }
       }
 
@@ -205,14 +205,15 @@ export default {
 }
 
 .secondary-section{
-  flex-grow: 1;
   background-color: #121212;
 
   .secondary-container{
     color: #4d4d4d;
     display: flex;
+    align-content: center;
     justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     width: 92%;
     margin: 0 auto;
     padding: 18px 0;
@@ -247,5 +248,29 @@ export default {
     }
   }
 }
+
+@media screen and (min-width: 576px) and  (max-width: 992px){
+
+  .main-container{
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card{
+      width: 45%;
+    }
+  }
+}
+
+@media screen and (max-width: 575px){
+  .main-container{
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card{
+      width: 100%;
+    }
+  }
+}
+
 
 </style>
