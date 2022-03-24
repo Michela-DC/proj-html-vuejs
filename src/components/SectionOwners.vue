@@ -4,17 +4,26 @@
             <div class="row">
                 <h3 class="title">Our home owners say</h3>
 
-                <figure class="owner-img">
-                    <img class="owner-photo" src="../assets/images/home-testimonial-113165296.jpg" alt="">
-                </figure>
+                <div class="slide" v-for="(slide, i) in slides" :key="i" :class="activeSlide(i)">
+                    <figure class="owner-img">
+                        <img class="owner-photo" :src="slide.ownerPhoto" alt="">
+                    </figure>
 
-                <p class="owner-says">
-                    “No man but feels more of a man in the world if he have but a bit of ground that he can call his own. However small it is on the surface, it is four thousand miles deep; and that is a very handsome property.”
-                </p>
+                    <p class="owner-says">
+                        " {{slide.ownerSays}} "
+                    </p>
 
-                <div class="owner-name">
-                    <div class="name">Jane Smith</div>
-                    <div class="role">new home owner</div>
+                    <div class="owner-name">
+                        <div class="name">{{slide.ownerName}}</div>
+                        <div class="role">new home owner</div>
+                    </div>
+
+                    <div class="btn-wrapper">
+                        <!-- assegno la classe active-btn al primo bottone se l'indice é uguale a 0 -->
+                        <button class="radio-button" @click="first()" :class="{'active-btn' : i === 0}"></button>
+                        <!-- assegno la classe active-btn al primo bottone se l'indice é uguale a 1 -->
+                        <button class="radio-button" @click="second()" :class="{'active-btn' : i === 1}"></button>
+                    </div>
                 </div>
             </div>
       </div>
@@ -23,9 +32,72 @@
 
 <script>
 export default {
-    name: 'SectionOwners'
+    name: 'SectionOwners',
+
+    data () {
+        return{
+            slides: [
+                {
+                    ownerPhoto: require("../assets/images/home-testimonial-113165296.jpg"),
+                    ownerSays: "No man but feels more of a man in the world if he have but a bit of ground that he can call his own. However small it is on the surface, it is four thousand miles deep; and that is a very handsome property.",
+                    ownerName: "Jane Smith"
+                },
+                {
+                    ownerPhoto: require("../assets/images/home-testimonial-84268399.jpg"),
+                    ownerSays: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio corporis commodi accusantium dolore, possimus itaque repellat quaerat esse sed expedita velit deleniti quam in? Quidem.",
+                    ownerName: "John Doe"
+                }
+            ],
+
+            activeIndex: 0,
+            clock: undefined,
+        }
+    },
+
+    methods: {
+
+        activeSlide: function (index){
+            if(this.activeIndex === index){
+                return 'activeSlide';
+            }
+        },
+
+        next: function () {
+            if (this.activeIndex < this.slides.length - 1){ 
+            // se l'indice è minore della lunghezza dell'array - 1 (ovvero minore delle posibili posizione dentro l'array allora incremento l'indice
+                this.activeIndex ++;
+            } 
+        },
+
+        previous: function () {
+            if ( this.activeIndex > 0){ 
+            //decremento l'activeIndex per stabilire la nuova slide corrente
+                this.activeIndex --;
+            } 
+        },
+
+        first: function() {
+            // quando clicco sul primo bottone l'indice va a 0 quindi sono alla prima immagine
+            this.activeIndex = 0;
+        },
+
+        second: function() {
+            // quando clicco sul primo bottone l'indice va a 1 quindi sono alla 2' immagine
+            this.activeIndex = 1;
+        },
+
+        startAutoplay: function (){
+            this.clock = setInterval (this.next, 4000);
+        },
+    },
+
+    mounted() {
+        this.startAutoplay();
+    },
 }
+
 </script>
+
 
 <style lang="scss" scoped>
 
@@ -64,59 +136,68 @@ export default {
     display: flex;
     justify-content: center;
     padding: 150px 20px;
+}
 
-    .row{
-        @include small-row;
-        @include flex-basics;
-        flex-direction: column;
-        gap: 25px;
-        text-align: center;
-        color: white;
+.row{
+    @include small-row;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
 
-        .title{
-            position: relative;
-            display: flex;
-            justify-content: center;
-            padding-bottom: 15px;
-            font-size: 1.5rem;
+    .title{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 15px;
+        font-size: 1.5rem;
 
-            &::after{
-                content: "";
-                position: absolute;
-                width: 150px;
-                top: 100%;
-                height: 0.125rem;
-                background-color: $light-color;
-            }
+        &::after{
+            content: "";
+            position: absolute;
+            width: 150px;
+            top: 100%;
+            height: 0.125rem;
+            background-color: $light-color;
         }
+    }
 
+    .slide{
+        gap: 25px;
+        // display: flex;
+        display: none;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    
         .owner-img{
             border-radius: 50%;
             overflow: hidden;
             height: 120px;
             width: 120px;
-
+    
             .owner-photo{
                 display: block;
                 width: 100%;
             }
         }
-
+    
         .owner-says{
             font-style: italic;
         }
-
+    
         .owner-name{
             text-transform: uppercase;
             font-weight: bold;
             font-size: 0.875rem;
             display: flex;
             gap: 15px;
-
+    
             .name{
                 position: relative;
                 padding-right: 10px;
-
+    
                 &::after{
                     content: "";
                     position: absolute;
@@ -129,9 +210,27 @@ export default {
                     background-color: white;
                     border-radius: 50%;
                 }
-            }
-            
+            } 
         }
+
+        .btn-wrapper{
+        .radio-button{
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1px solid white;
+            margin: 5px;
+            background-color: transparent;
+        }
+
+        .active-btn{
+            background-color: white;
+        }
+    }
+    }
+
+    .activeSlide{
+        display: flex;
     }
 }
 

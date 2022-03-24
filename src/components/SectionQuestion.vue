@@ -36,16 +36,14 @@ export default {
         margin: 0 auto;
 
         button{
-            @include btn-dark;
+            background-color: $dark-color;
+            color: $light-gray;
             @include btn-common;
-            // padding: 10px 25px;
             text-transform: uppercase;
             border: 2px solid white;
             font-size: 0.80rem;
             position: absolute;
             top: 96%;
-            left: 50%;
-            transform: translate(-50%);
 
             &:hover{
                 background-color: white;

@@ -21,7 +21,7 @@
                                 </div>
                             </div>
                             <div>Redeveloping</div>
-                            <p>All about architectures and construction</p>
+                            <p>All about architecture and construction</p>
                         </div>
                     </figure>
 
@@ -52,7 +52,7 @@
                                 </div>
                             </div>
                            <div>Redeveloping</div>
-                            <p>All about architectures and construction</p>
+                            <p>All about architecture and construction</p>
                         </div>
                     </figure>
 
@@ -81,7 +81,7 @@
                                 </div>
                             </div>
                             <div>Redeveloping</div>
-                            <p>All about architectures and construction</p>
+                            <p>All about architecture and construction</p>
                         </div>
                     </figure>
 
