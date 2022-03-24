@@ -11,7 +11,8 @@
             <div class="account-id">@Theme_Fusion</div>
 
             <p class="twit-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere accusamus maxime dolores amet rerum iste necessitatibus dolore odio debitis tempora?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam facilis, nobis reprehenderit numquam sapiente animi in at fugiat cumque architecto tempore ipsam. Voluptas, est sapiente. 
+                <span>#avadaconstruction</span>
             </p>
             
             <figure class="twit-img-wrapper">
@@ -89,6 +90,10 @@ export default {
         .twit-text{
             line-height: 1rem;
             margin-bottom: 20px;
+
+            span{
+                color: #1E90FF;
+            }
         }
 
         .twit-img-wrapper{

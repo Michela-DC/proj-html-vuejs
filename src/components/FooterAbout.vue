@@ -2,39 +2,52 @@
   <footer>
       <div class="footer-container">
           <section class="main-section">
-            <div class="container">
-                <div class="card" v-for="(item, i) in aboutAvada" :key="i">
-                    <figure class="logo-wrapper" v-if="aboutAvada[i].logo">
-                        <img :src="aboutAvada[i].logo" alt=""> 
-                    </figure>
+              <div class="main-container">
+                  <div class="card" v-for="(item, i) in aboutAvada" :key="i">
+                      <figure class="logo-wrapper" v-if="aboutAvada[i].logo">
+                          <img :src="aboutAvada[i].logo" alt=""> 
+                      </figure>
 
-                    <div v-if="aboutAvada[i].title" class="title">
-                        <h5>{{aboutAvada[i].title}}</h5>
-                    </div>
+                      <div v-if="aboutAvada[i].title" class="title">
+                          <h5>{{aboutAvada[i].title}}</h5>
+                      </div>
 
-                    <p class="description" v-if="aboutAvada[i].description">{{aboutAvada[i].description}}</p>
+                      <p class="description" v-if="aboutAvada[i].description">{{aboutAvada[i].description}}</p>
 
-                    <button class="btn-learn-more" v-if="aboutAvada[i].button">{{aboutAvada[i].button}}</button>
+                      <button class="btn-learn-more" v-if="aboutAvada[i].button">{{aboutAvada[i].button}}</button>
 
-                    <FooterTwit v-if="aboutAvada[i].twitImg" :twitImg="aboutAvada[i].twitImg"/>
+                      <FooterTwit v-if="aboutAvada[i].twitImg" :twitImg="aboutAvada[i].twitImg"/>
 
-                    <ul class="contacts-container" v-if="aboutAvada[i].contactList">
-                        <li class="contact-wrapper" v-for="(element, j) in aboutAvada[i].contactList" :key="j">
-                            <i class="contact-icon" :class="element.icon"></i>
-                            <div class="contact-info" v-if="element.info">{{element.info}}</div>
-                            <div class="contact-info-location" v-else>{{element.infoLocation}}</div>
-                        </li>
-                    </ul>
+                      <ul class="contacts-container" v-if="aboutAvada[i].contactList">
+                          <li class="contact-wrapper" v-for="(element, j) in aboutAvada[i].contactList" :key="j">
+                              <i class="contact-icon" :class="element.icon"></i>
+                              <div class="contact-info" v-if="element.info">{{element.info}}</div>
+                              <div class="contact-info-location" v-else>{{element.infoLocation}}</div>
+                          </li>
+                      </ul>
 
-                    <figure class="location-wrapper" v-if="aboutAvada[i].image">
-                        <img class="location" :src="aboutAvada[i].image" alt="">
-                    </figure>
-                </div>
-            </div>
+                      <figure class="location-wrapper" v-if="aboutAvada[i].image">
+                          <img class="location" :src="aboutAvada[i].image" alt="">
+                      </figure>
+                  </div>
+              </div>
           </section>
 
           <section class="secondary-section">
+              <div class="secondary-container">
+                  <div class="copyright-wrapper">
+                      <div class="copyright">Copyright 2021-2022</div>
+                      <div class="theme">Avada theme by <span>theme fusion</span></div>
+                      <div class="rights">all rights reserved</div>
+                      <div class="powered">powered by <span>me, myself and I</span></div>
+                  </div>
 
+                  <div class="social-media">
+                    <a href="">
+                      <i v-for="(icon, i) in socialMedia" :key="i" :class="icon"></i>
+                    </a>
+                  </div>
+              </div>
           </section>
       </div>
   </footer>
@@ -95,6 +108,13 @@ export default {
             image: require ('../assets/images/construction_map_pin.png')
           }
         ],
+
+        socialMedia:[
+          'fab fa-facebook-f',
+          'fab fa-twitter',
+          'fab fa-youtube',
+          'fab fa-instagram'
+        ]
       }
     }
 }
@@ -115,7 +135,7 @@ export default {
   background-color: #1E1E1E;
 }
 
-.container{
+.main-container{
   margin: 0 auto;
   display: flex;
   gap: 3%;
@@ -149,6 +169,7 @@ export default {
 
       .btn-learn-more{
         @include btn-light;
+        border: none;
         font-size: 0.75rem;
         text-transform: uppercase;
         padding: 8px 25px;
@@ -186,6 +207,45 @@ export default {
 .secondary-section{
   flex-grow: 1;
   background-color: #121212;
+
+  .secondary-container{
+    color: #4d4d4d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 92%;
+    margin: 0 auto;
+    padding: 18px 0;
+
+    .copyright-wrapper{
+      display: flex;
+      font-size: 0.6rem;
+
+      div:nth-child(n+2){ //seleziono gli ultimi 3 div
+        text-transform: uppercase;
+      }
+
+      .theme, .powered{
+        span{
+          color: dimgray;
+        }
+      }
+
+      .rights{
+        padding: 0 8px;
+        border-right: 1px solid #4d4d4d;
+        border-left: 1px solid #4d4d4d;
+        margin: 0 8px;
+      }
+    }
+
+    .social-media{
+      .fab{
+        margin: 0 8px;
+        font-size: 0.8rem;
+      }
+    }
+  }
 }
 
 </style>
