@@ -32,6 +32,7 @@ export default {
         display: flex;
         justify-content: center;
         position: relative;
+        text-align: center;
         padding: 20px 0 30px 0;
         margin: 0 auto;
 

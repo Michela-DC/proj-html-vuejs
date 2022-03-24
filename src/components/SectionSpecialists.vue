@@ -162,6 +162,11 @@ export default {
 }
 
 @media screen and (max-width: 575px){
+
+    .container{
+        padding-bottom: 0;
+    }
+
     .cards-row{
         width: 100%;
         flex-wrap: wrap;

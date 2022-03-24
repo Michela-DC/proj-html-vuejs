@@ -24,6 +24,11 @@
 
 @mixin cards-img-mediaquery{
     @media screen and (max-width: 575px){
+
+        .container{
+            padding-top: 0;
+        }
+
         .cards-row{
             flex-wrap: wrap;
     
