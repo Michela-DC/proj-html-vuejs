@@ -63,17 +63,27 @@ export default {
         },
 
         next: function () {
+            // potevo anche solo usare this.activeIndex = 1  dato che ho solo due slide ma in questo modo se aggiungo altre slide il loop continua in ordine 
             if (this.activeIndex < this.slides.length - 1){ 
             // se l'indice è minore della lunghezza dell'array - 1 (ovvero minore delle posibili posizione dentro l'array allora incremento l'indice
                 this.activeIndex ++;
-            } 
+            } else{
+            // se l'indice diventa maggiore della lunghezza dell'array - 1 allora lo faccio ritornare a zero, ovvero alla posizione della prima immagine nell'array
+                this.activeIndex = 0;
+            }
+            
         },
 
         previous: function () {
             if ( this.activeIndex > 0){ 
             //decremento l'activeIndex per stabilire la nuova slide corrente
                 this.activeIndex --;
+
+            } else {
+                // potevo anche solo usare this.activeIndex = 1 ma in questo modo se aggiungo altra slide quando sono all'ultima slide ritorna alla prima
+                this.activeIndex = this.slides.length - 1;
             } 
+            
         },
 
         first: function() {
