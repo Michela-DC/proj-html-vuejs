@@ -58,10 +58,12 @@ export default {
 
 .container{
     @include flex-basics;
-    // min-height: 414px;
-    padding: 100px 0 50px 0;
+    padding: 100px 0 80px 0;
     flex-direction: column;
     gap: 55px;
+    //per coprire clip-path della section four:
+    position: relative;
+    z-index: 3;
 }
 
 @include reusable-title-row;

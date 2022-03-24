@@ -140,7 +140,7 @@ export default {
   display: flex;
   gap: 3%;
   padding: 60px 0;
-  width: 92%;
+  width: 91%;
 
   .card{
       width: calc(91% / 4);

@@ -58,11 +58,13 @@ export default {
 
 .container{
     background-color: $light-gray;
-    // min-height: 414px;
     padding: 70px 0 50px 0;
     @include flex-basics;
     flex-direction: column;
     gap: 55px;
+    //per coprire clip-path della section four:
+    position: relative;
+    z-index: 3;
 }
 
 @include reusable-title-row;

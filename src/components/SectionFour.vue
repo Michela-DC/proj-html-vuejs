@@ -45,42 +45,42 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @import '../assets/scss/mixins.scss';
-
 .section-4{
     background-image: url('../assets/images/home-244125289.jpg');
     @include bg-image;
     position: relative;
     
     &::before{
-        content: '';
+        content: "";
         position: absolute;
-        top: 0;
+        bottom: 72%;
         width: 100%;
-        height: 68px;
-        background: radial-gradient(60% 68px at top, white 99%, transparent);
+        height: 500px;
+        background-color: white;
+        -webkit-clip-path: ellipse(60% 30% at 50% 50%);
+        clip-path: ellipse(68% 35% at 50% 50%);
     }
 
     &::after{
-        content: '';
+        content: "";
         position: absolute;
-        bottom: 0;
+        top: 72%;
         width: 100%;
-        height: 68px;
-        background: radial-gradient(60% 68px at bottom, white 99%, transparent);
+        height: 500px;
+        background-color: white;
+        -webkit-clip-path: ellipse(60% 30% at 50% 50%);
+        clip-path: ellipse(68% 35% at 50% 50%);
     }
 
     .container{
-        padding: 200px 0;
+        padding: 175px 0;
         @include flex-basics;
 
         .cards-row{
             @include medium-row;
-            width: 70%;
             display: flex;
             justify-content: space-between;
-
             .card{
                 text-transform: uppercase;
                 text-align: center;
@@ -89,17 +89,13 @@ export default {
                     color: $light-color;
                     font-size: 3rem;
                 }
-
                 .info{
                     padding-top: 8px;
                     color: white;
                     font-size: 0.875rem;
                 }
-
             }
         }
-
     }
 }
-
 </style>

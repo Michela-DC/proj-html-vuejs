@@ -38,21 +38,25 @@ export default {
     position: relative;
     
     &::before{
-        content: '';
+        content: "";
         position: absolute;
-        top: 0;
+        bottom: 75%;
         width: 100%;
-        height: 68px;
-        background: radial-gradient(60% 68px at top, $light-gray 99%, transparent);
+        height: 500px;
+        background-color: $light-gray;
+        -webkit-clip-path: ellipse(60% 30% at 50% 50%);
+        clip-path: ellipse(68% 35% at 50% 50%);
     }
 
     &::after{
-        content: '';
+        content: "";
         position: absolute;
-        bottom: 0;
+        top: 75%;
         width: 100%;
-        height: 68px;
-        background: radial-gradient(60% 68px at bottom, $light-gray 99%, transparent);
+        height: 500px;
+        background-color: $light-gray;
+        -webkit-clip-path: ellipse(60% 30% at 50% 50%);
+        clip-path: ellipse(68% 35% at 50% 50%);
     }
 }
 
@@ -89,6 +93,8 @@ export default {
         .owner-img{
             border-radius: 50%;
             overflow: hidden;
+            height: 120px;
+            width: 120px;
 
             .owner-photo{
                 display: block;

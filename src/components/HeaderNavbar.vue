@@ -39,17 +39,15 @@ export default {
 header{
     width: 100%;
     font-size: 0.875rem;
-    // position: sticky;
-    // top: 0;
-    // z-index: 10;
+    position: sticky;
+    top: 0;
+    z-index: 10;
     background-color: white;
 }
 
 .header-container{
-    // min-height: 88px;
-    // max-width: 1254px;
     padding: 18px 0;
-    max-width: 87%;
+    max-width: 91%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -58,16 +56,18 @@ header{
 
     .logo-wrapper{
         .logo{
-            width: 145px;
+            width: 165px;
         }
     }
 
     .navbar{
+        color: $gray-font;
+        font-size: 0.7rem;
         text-transform: uppercase;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        gap: 25px;
+        gap: 30px;
 
         .btn-quote{
             // padding: 10px 25px;
