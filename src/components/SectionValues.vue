@@ -55,6 +55,7 @@ export default {
 
 @import '../assets/scss/mixins.scss';
 @import '../assets/scss/variables.scss';
+@import '../assets/scss/mixins_mediaqueries.scss';
 
 .container{
     background-color: $light-gray;

@@ -47,6 +47,7 @@ export default {
 <style lang="scss" scoped>
 
 @import '../assets/scss/mixins.scss';
+@import '../assets/scss/mixins_mediaqueries.scss';
 
 .section-numbers{
     background-image: url('../assets/images/home-244125289.jpg');

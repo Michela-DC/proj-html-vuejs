@@ -117,6 +117,7 @@ export default {
 @import '../assets/scss/mixins.scss';
 @import '../assets/scss/variables.scss';
 @import '../assets/scss/mixins_Hover.scss';
+@import '../assets/scss/mixins_mediaqueries.scss';
 
 
 .section-news{
@@ -225,5 +226,6 @@ export default {
 }
 
 @include cards-img-mediaquery;
+@include view-all;
 
 </style>

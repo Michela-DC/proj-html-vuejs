@@ -1,0 +1,53 @@
+@mixin cards-mediaquery{
+    @media screen and (min-width: 576px) and (max-width: 768px){
+        .cards-row{
+            flex-wrap: wrap;
+    
+            .card{
+                width: calc(94% / 2);
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 575px){
+        .cards-row{
+            flex-wrap: wrap;
+    
+            .card{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@mixin cards-img-mediaquery{
+    @media screen and (max-width: 575px){
+        .cards-row{
+            flex-wrap: wrap;
+    
+            .card{
+                width: 68%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@mixin view-all{
+
+    @media screen and (max-width: 575px){
+        .view-all-row{
+            
+            &::before{
+                width: 20%;
+            }
+        
+            &::after{
+                width: 20%;
+            }
+        }
+    }
+
+}

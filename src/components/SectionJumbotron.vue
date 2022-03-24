@@ -9,29 +9,21 @@
                     <button class="btn-quote">get a quote today</button>
                 </div>
             </div>
-
-            <div class="demos-sale">
-                <div class="demos">
-                    <div class="icon">
-                        <i class="fa-solid fa-folder-open"></i>
-                    </div>
-                    <div>Demos</div>
-                </div>
-                <div class="on-sale">
-                    <div class="sale-price">
-                        <span class="dollar">$</span>
-                        <span class="number">39</span>
-                    </div>
-                    <div>On Sale</div>
-                </div>
-            </div>
         </div>
+        <DemosSales/>
     </section>
 </template>
 
 <script>
+
+import DemosSales from './DemosSales.vue'
+
 export default {
-    name: 'SectionJumbotron'
+    name: 'SectionJumbotron',
+
+    components: {
+        DemosSales,
+    }
 }
 </script>
 
@@ -84,67 +76,6 @@ export default {
             }
         }
     } //fine row
-
-    .demos-sale{
-        position: fixed;
-        z-index: 20;
-        top: 110px;
-        right: 16px;
-
-        .demos, .on-sale{
-            background-color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 5px;
-            font-size: 0.625rem;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            font-weight: bold;
-            box-shadow: 0px 0px 15px $gray-font;
-        }
-
-        .demos{
-            margin-bottom: 5px;
-
-            .icon{
-                font-size: 1rem;
-            }
-        }
-
-        .on-sale{
-            .sale-price{
-                font-size: 1.125rem;
-                color: #53aa53;
-                position: relative;
-                margin-bottom: 3px;
-                
-
-                .dollar{
-                    position: absolute;
-                    top: 3px;
-                    font-size: 0.75rem;
-                }
-
-                .number{
-                    margin-left: 7px;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 549px) and (max-width: 729px){
-    .jumbo-container .demos-sale{
-        top: 150px;
-    }
-}
-
-@media screen and (max-width: 548px){
-    .jumbo-container .demos-sale{
-        top: 190px;
-    }
 }
     
 </style>
