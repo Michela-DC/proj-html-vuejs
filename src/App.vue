@@ -32,7 +32,6 @@ import SectionNine from './components/SectionNine.vue'
 import SectionTen from './components/SectionTen.vue'
 import FooterAbout from './components/FooterAbout.vue'
 
-
 export default {
   name: 'App',
   components: {
