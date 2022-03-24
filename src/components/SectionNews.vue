@@ -116,6 +116,8 @@ export default {
 
 @import '../assets/scss/mixins.scss';
 @import '../assets/scss/variables.scss';
+@import '../assets/scss/mixins_Hover.scss';
+
 
 .section-news{
     background-color: $light-gray;
@@ -184,46 +186,7 @@ export default {
     }//fine card
 }
 
-.card-back{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: $light-color;
-    color: white;
-    visibility: hidden;
-    text-align: center;
-    padding: 10px;
-
-    .icons-container{
-        display: flex;
-        gap: 5px;
-
-        .icon-wrapper{
-            width: 40px;
-            height: 40px;
-            border-radius: 100%;
-            @include flex-basics;
-            background-color: white;
-            color: $light-color;
-            margin: 5px;
-            font-size: 1.3rem;
-        }
-
-    }
-
-    p:last-child{
-        font-size: 0.8rem;
-    }
-}
-
-.card:hover .card-back{
-    visibility: visible;
-}
+@include hover_section-news;
 
 .view-all-row{
     @include medium-row;

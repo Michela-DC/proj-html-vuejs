@@ -82,6 +82,7 @@ export default {
 
 @import '../assets/scss/mixins.scss';
 @import '../assets/scss/variables.scss';
+@import '../assets/scss/mixins_Hover.scss';
 
 .container{
     // height: 550px;
@@ -111,54 +112,11 @@ export default {
                 width: 100%;
             }
         }
-
-        .card-back{
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            @include flex-basics;
-            flex-direction: column;
-            gap: 4px;
-            color: white;
-            text-align: center;
-            background-color: $light-color;
-            visibility: hidden;
-
-            .icons-container{
-                display: flex;
-                gap: 5px;
-
-                .icon-wrapper{
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 100%;
-                    @include flex-basics;
-                    background-color: rgba(255, 255, 255, 0.5);
-                    margin: 5px;
-                    font-size: 1.3rem;
-                }
-
-            }
-
-            div:nth-child(2){
-                font-size: 1.2rem;
-            }
-
-            div:last-child{
-                font-size: 0.8rem;
-            }
-        }
-
-        &:hover{
-            .card-back{
-                visibility: visible
-            }
-        }
     }
 
 }
+
+@include hover_section-explore;
 
 .view-all-row{
     @include medium-row;
