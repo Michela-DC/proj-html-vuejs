@@ -32,7 +32,7 @@
 // bottoni ---------------------
 
 @mixin btn-common{
-    padding: 12px 30px;
+    padding: 12px 32px;
     text-transform: uppercase;
     border: none;
 }
@@ -40,11 +40,21 @@
 @mixin btn-dark{
     background-color: $dark-color;
     color: $light-gray;
+
+    &:hover{
+        background-color: $light-color;
+        color: $dark-color;
+    }
 }
 
 @mixin btn-light{
     background-color: $light-color;
-    color: $gray-font;
+    color: $dark-color;
+
+    &:hover{
+        background-color: $dark-color;
+        color: white;
+    }
 }
 
 // -------------------------------

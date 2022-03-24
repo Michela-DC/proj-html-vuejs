@@ -70,9 +70,10 @@ header{
         gap: 30px;
 
         .btn-quote{
-            // padding: 10px 25px;
             @include btn-common;
+            padding: 12px 25px;
             @include btn-light;
+            color: $gray-font;
         }
     }
 }

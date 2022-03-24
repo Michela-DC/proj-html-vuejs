@@ -46,6 +46,12 @@ export default {
             top: 96%;
             left: 50%;
             transform: translate(-50%);
+
+            &:hover{
+                background-color: white;
+                border: 2px solid $dark-color;
+                color: $dark-color;
+            }
         }
         
     }

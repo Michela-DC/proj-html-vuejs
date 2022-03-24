@@ -8,36 +8,23 @@
                 </div>
 
                 <div class="cards-row">
-                    <div class="card">
-                        <div class="icon">
-                            <i class="fa-regular fa-building"></i>
+                    <div class="card" v-for="card in cards" :key="card.id">
+                        <div v-if="card.icon" class="icon front">
+                            <i :class="card.icon"></i>
                         </div>
-                        <h3>Buildings</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, sapiente!</p>
-                    </div>
 
-                    <div class="card">
-                        <div class="icon">
-                            <i class="fa-solid fa-rotate"></i>
+                        <div v-if="card.titleFront" class="title front">
+                            {{card.titleFront}}
                         </div>
-                        <h3>Renovate</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, sapiente!</p>
-                    </div>
+                        <div v-if="card.titleBack" class="title back">
+                            {{card.titleBack}}
+                        </div>
 
-                    <div class="card">
-                        <div class="icon">
-                            <i class="fa-solid fa-house-chimney"></i>
-                        </div>
-                        <h3>Construct</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, sapiente!</p>
-                    </div>
 
-                    <div class="card">
-                        <div class="icon">
-                            <i class="fa-solid fa-truck"></i>
-                        </div>
-                        <h3>Exclusive</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, sapiente!</p>
+                        <button v-if="card.button" class="btn-quote back">
+                            {{card.button}}
+                        </button>
                     </div>
                 </div>
 
@@ -47,7 +34,39 @@
 
 <script>
 export default {
-    name: 'SectionSpecialists'
+    name: 'SectionSpecialists',
+
+    data () {
+        return {
+            cards: [
+                {   id: '1',   
+                    icon: 'fa-regular fa-building',
+                    titleFront: 'Buildings',
+                    titleBack: 'Artfully Crafted',
+                    button: 'get a quote'
+                },
+                {   id: '2',
+                    icon: 'fa-solid fa-rotate',
+                    titleFront: 'Renovate',
+                    titleBack: 'Freshly New',
+                    button: 'get a quote'
+                },
+                {   id: '3',
+                    icon: 'fa-solid fa-house-chimney',
+                    titleFront: 'Construct',
+                    titleBack: 'perfect lines',
+                    button: 'get a quote'
+                },
+                {   id: '4',
+                    icon: 'fa-solid fa-truck',
+                    titleFront: 'Exclusive',
+                    titleBack: 'planning',
+                    button: 'get a quote'
+                }
+            ],
+        }
+    },
+    
 }
 </script>
 
@@ -69,7 +88,6 @@ export default {
 @include reusable-title-row;
 
 .cards-row{
-    border: 1px solid red;
     width: 82%;
     display: flex;
     @include flex-basics;
@@ -85,7 +103,7 @@ export default {
         color: $gray-font;
         background-color: $light-gray;
         border-radius: 10px;
-        padding: 30px 12px;
+        padding: 30px 18px;
 
         .icon{
             border: 1px solid $gray-font;
@@ -93,6 +111,34 @@ export default {
             height: 45px;
             border-radius: 50%;
             @include flex-basics;
+        }
+
+        .title.back{
+            text-transform: uppercase;
+        }
+
+        .btn-quote{
+            @include btn-common;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: $gray-font;
+        }
+
+        .back{
+            display: none;
+        }
+
+        &:hover{
+            background-color: $light-color;
+
+            .front{
+                display: none;
+            }
+
+            .back{
+                display: block;
+
+
+            }
         }
     }
 }

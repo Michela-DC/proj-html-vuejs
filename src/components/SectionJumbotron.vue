@@ -63,6 +63,7 @@ export default {
         .subtitle{
             color: $light-color;
             margin-bottom: 30px;
+            font-size: 1.15rem;
         }
 
         .btn-container{
@@ -70,11 +71,11 @@ export default {
                 @include btn-common;
                 font-size: 0.9rem;
                 font-weight: 300;
-                padding: 12px 30px;
             }
 
             .btn-explore{
-                margin-right: 12px;
+                margin-right: 15px;
+                margin-bottom: 12px;
                 @include btn-dark;
             }
 
