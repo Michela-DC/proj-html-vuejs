@@ -126,7 +126,18 @@ export default {
                 background-color: $gray-font;
             }
         }
+
+        &:hover{
+            .icon{
+                background-color: $light-color;
+            }
+
+            .icon-title::after{
+                background-color: $light-color;
+            }
+        }
     }
+
 }
 
 @include cards-mediaquery;

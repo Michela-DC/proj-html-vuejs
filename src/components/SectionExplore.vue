@@ -11,16 +11,55 @@
                     <figure class="img-wrapper">
                         <img class="project-img" src="../assets/images/project2-featured-15013609-400x400.jpg" alt="">
                     </figure>
+
+                    <div class="card-back">
+                        <div class="icons-container">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-link"></i>
+                            </div>
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div>Florida health facility</div>
+                        <div>commercial</div>
+                    </div>
                 </div>
                 <div class="card">
                     <figure class="img-wrapper">
                         <img class="project-img" src="../assets/images/project1-featured-294276386-400x400.jpg" alt="">
                     </figure>
+
+                    <div class="card-back">
+                        <div class="icons-container">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-link"></i>
+                            </div>
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div>Maine Modernity</div>
+                        <div>residential</div>
+                    </div>
                 </div>
                 <div class="card">
                     <figure class="img-wrapper">
                         <img class="project-img" src="../assets/images/project3-featured-189023420-400x400.jpg" alt="">
                     </figure>
+
+                    <div class="card-back">
+                        <div class="icons-container">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-link"></i>
+                            </div>
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div>Exclusive Urban Living</div>
+                        <div>commercial</div>
+                    </div>
                 </div>
             </div>
 
@@ -35,7 +74,7 @@
 
 <script>
 export default {
-    name: 'SectionExplore'
+    name: 'SectionExplore',
 }
 </script>
 
@@ -64,10 +103,57 @@ export default {
     gap: 2.8%;
 
     .card{
+        position: relative;
+
         .img-wrapper{
             .project-img{
                 display: block;
                 width: 100%;
+            }
+        }
+
+        .card-back{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            @include flex-basics;
+            flex-direction: column;
+            gap: 4px;
+            color: white;
+            text-align: center;
+            background-color: $light-color;
+            visibility: hidden;
+
+            .icons-container{
+                display: flex;
+                gap: 5px;
+
+                .icon-wrapper{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 100%;
+                    @include flex-basics;
+                    background-color: rgba(255, 255, 255, 0.5);
+                    margin: 5px;
+                    font-size: 1.3rem;
+                }
+
+            }
+
+            div:nth-child(2){
+                font-size: 1.2rem;
+            }
+
+            div:last-child{
+                font-size: 0.8rem;
+            }
+        }
+
+        &:hover{
+            .card-back{
+                visibility: visible
             }
         }
     }

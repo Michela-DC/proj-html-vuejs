@@ -10,7 +10,23 @@
                 <div class="card">
                     <figure class="img-wrapper">
                         <img class="project-img" src="../assets/images/blog-post-134132600-200x121.jpg" alt="">
+
+                        <div class="card-back">
+                            <div class="icons-container">
+                                <div class="icon-wrapper">
+                                    <i class="fa-solid fa-link"></i>
+                                </div>
+                                <div class="icon-wrapper">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            </div>
+                            <div>Redeveloping</div>
+                            <p>All about architectures and construction</p>
+                        </div>
                     </figure>
+
+
+
                     <div class="card-info">
                         <div class="title-wrapper">
                             <h3 class="title">Redeveloping Florida’s Remote Southern Coast</h3>
@@ -25,7 +41,21 @@
                 <div class="card">
                     <figure class="img-wrapper">
                         <img class="project-img" src="../assets/images/blog-post-92486644-400x241.jpg" alt="">
+
+                        <div class="card-back">
+                            <div class="icons-container">
+                                <div class="icon-wrapper">
+                                    <i class="fa-solid fa-link"></i>
+                                </div>
+                                <div class="icon-wrapper">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            </div>
+                           <div>Redeveloping</div>
+                            <p>All about architectures and construction</p>
+                        </div>
                     </figure>
+
                     <div class="card-info">
                         <div class="title-wrapper">
                             <h3 class="title">How We Manage Large Construction Projects</h3>
@@ -40,7 +70,21 @@
                 <div class="card">
                     <figure class="img-wrapper">
                         <img class="project-img" src="../assets/images/blog-post-332773904-400x241.jpg" alt="">
+                        
+                        <div class="card-back">
+                            <div class="icons-container">
+                                <div class="icon-wrapper">
+                                    <i class="fa-solid fa-link"></i>
+                                </div>
+                                <div class="icon-wrapper">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            </div>
+                            <div>Redeveloping</div>
+                            <p>All about architectures and construction</p>
+                        </div>
                     </figure>
+
                     <div class="card-info">
                         <div class="title-wrapper">
                             <h3 class="title">Future proofing a modern home</h3>
@@ -99,6 +143,9 @@ export default {
     .card{
         // width: calc(96% / 3);
         .img-wrapper{
+            position: relative;
+            position: relative;
+
             .project-img{
                 display: block;
                 width: 100%;
@@ -133,9 +180,49 @@ export default {
             .paragraph{
                 padding-top: 12px;
             }
+        } //fine card-info
+    }//fine card
+}
 
+.card-back{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $light-color;
+    color: white;
+    visibility: hidden;
+    text-align: center;
+    padding: 10px;
+
+    .icons-container{
+        display: flex;
+        gap: 5px;
+
+        .icon-wrapper{
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            @include flex-basics;
+            background-color: white;
+            color: $light-color;
+            margin: 5px;
+            font-size: 1.3rem;
         }
+
     }
+
+    p:last-child{
+        font-size: 0.8rem;
+    }
+}
+
+.card:hover .card-back{
+    visibility: visible;
 }
 
 .view-all-row{
