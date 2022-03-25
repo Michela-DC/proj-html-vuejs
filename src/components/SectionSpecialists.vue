@@ -119,6 +119,7 @@ export default {
 
         .btn-quote{
             @include btn-common;
+            @include btn-light;
             background-color: rgba(255, 255, 255, 0.5);
             color: $gray-font;
         }

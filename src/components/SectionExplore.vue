@@ -65,7 +65,7 @@
 
             <div class="view-all-row">
                 <div class="view-all">
-                    view all projects
+                    <a href="">view all projects</a>
                 </div>
             </div>
       </div>

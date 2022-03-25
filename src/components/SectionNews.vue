@@ -99,7 +99,7 @@
 
             <div class="view-all-row">
                 <div class="view-all">
-                    view all articles
+                    <a href="">view all projects</a>
                 </div>
             </div>
       </div>

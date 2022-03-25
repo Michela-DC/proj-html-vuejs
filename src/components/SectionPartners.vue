@@ -80,7 +80,6 @@ export default {
         justify-content: center;
 
         .logo-wrapper{
-            border: 1px solid green;
             width: 40%;
         }
     }

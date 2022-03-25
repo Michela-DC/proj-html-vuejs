@@ -124,16 +124,16 @@ export default {
                 width: 15%;
                 top: 100%;
                 height: 0.125rem;
-                background-color: $gray-font;
+                color: $gray-font;
             }
         }
 
         &:hover{
-            .icon{
-                background-color: $light-color;
+            .icon-title{
+                color: $light-color;
             }
 
-            .icon-title::after{
+            .icon{
                 background-color: $light-color;
             }
         }

@@ -265,10 +265,20 @@ export default {
   .main-container{
     flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;
 
     .card{
       width: 100%;
+
+      .location-wrapper{
+        .location{
+          width: 80%;
+          display: block;
+          margin: 0 auto;
+        }
+      }
     }
+
   }
 }
 
